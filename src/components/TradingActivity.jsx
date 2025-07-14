@@ -98,7 +98,7 @@ const trades = [
 
 const TradingActivity = () => {
   return (
-    <div className="bg-gray-800 rounded-md shadow-lg m-6 my-14 md:m-14 max-w-2xl md:mx-auto md:max-w-6xl">
+    <div className="bg-gray-800 rounded-md shadow-lg m-6 my-14 md:m-14 max-w-2xl md:mx-6 lg:mx-auto md:max-w-6xl">
       {trades.map((trade, idx) => (
         <div
           key={trade.id}

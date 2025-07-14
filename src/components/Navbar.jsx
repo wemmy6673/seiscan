@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { BsSearch } from "react-icons/bs";
 import { BsTextRight } from "react-icons/bs";
+import { RxCross1 } from "react-icons/rx";
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -45,16 +46,18 @@ const Navbar = () => {
           </div>
         </div>
         
-        <div className="flex items-center space-x-4 md:space-x-6">
+        <div className="flex items-center space-x-6">
         <BsSearch className='text-white text-xl cursor-pointer' />
-          <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md transition-colors duration-200">
-            Connect Wallet
-          </button>
           <button 
-            className="md:hidden text-white text-3xl cursor-pointer"
+            className="md:hidden text-white text-3xl cursor-pointer transition-transform duration-300"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            aria-label="Toggle menu"
           >
-            <BsTextRight />
+            {isMobileMenuOpen ? (
+              <RxCross1 className="transition-transform duration-300 rotate-90" />
+            ) : (
+              <BsTextRight className="transition-transform duration-300 rotate-0" />
+            )}
           </button>
         </div>
       </div>

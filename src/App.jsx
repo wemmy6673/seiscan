@@ -5,17 +5,23 @@ import './App.css'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import SearchForm from './components/SearchForm'
+import FeaturesSection from './components/FeaturesSection'
 import TradingActivity from './components/TradingActivity'
+import FollowUsCard from './components/FollowUsCard'
+import FAQSection from './components/FAQSection'
+import Footer from './components/Footer'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
       <Navbar />
       <Hero />
       <SearchForm />
       <TradingActivity />
+      <FeaturesSection />
+      <FollowUsCard />
+      <FAQSection />
+      <Footer />
     </>
   )
 }
