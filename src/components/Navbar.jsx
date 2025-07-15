@@ -46,8 +46,11 @@ const Navbar = () => {
           </div>
         </div>
         
-        <div className="flex items-center space-x-6">
-        <BsSearch className='text-white text-xl cursor-pointer' />
+        <div className="flex items-center space-x-3 md:space-x-6">
+          <BsSearch className='text-white text-xl cursor-pointer' />
+          <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md transition-colors duration-200 font-medium">
+            Connect Wallet
+          </button>
           <button 
             className="md:hidden text-white text-3xl cursor-pointer transition-transform duration-300"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
