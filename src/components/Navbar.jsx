@@ -1,12 +1,24 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { BsSearch } from "react-icons/bs";
 import { BsTextRight } from "react-icons/bs";
 import { RxCross1 } from "react-icons/rx";
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 10);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <nav className="bg-transparent border-b border-gray-600 px-6 py-6 relative">
+    <nav
+      className={`sticky top-0 z-50 border-b border-gray-600 px-6 py-6 relative bg-[#1A1A1A] ${scrolled ? 'shadow-lg' : ''}`}
+    >
       <div className="w-full flex justify-between items-center">
         <div className="flex items-center space-x-4">
           <h1 className="text-white text-2xl font-bold">SeisScan</h1>
