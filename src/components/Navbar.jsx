@@ -60,7 +60,7 @@ const Navbar = () => {
         
         <div className="flex items-center space-x-3 md:space-x-6">
           <BsSearch className='text-white text-xl cursor-pointer' />
-          <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md transition-colors duration-200 font-medium">
+          <button className="bg-blue-600 hover:bg-blue-700 text-white px-2 py-2 md:px-4 rounded-md transition-colors duration-200 font-medium">
             Connect Wallet
           </button>
           <button 
